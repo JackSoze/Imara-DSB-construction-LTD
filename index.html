@@ -3,82 +3,264 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Imara DSB Construction Ltd | Design, BOQs, Supervision & Construction – Meru</title>
-<meta name="description" content="Imara DSB Construction Ltd: architectural and structural design, bills of quantities, project supervision and construction in Meru, Maua and Eastern Kenya.">
+<title>Imara DSB Construction Ltd | Design · Supply · Build – Meru</title>
+<meta name="description" content="Imara DSB Construction Ltd provides architectural and structural design, BOQs, project supervision, construction, building materials, biodigesters and wastewater management in Meru, Maua and Eastern Kenya.">
 <style>
-:root{--bg:#fbfaf7;--fg:#1d2420;--mut:#5b665f;--card:#fff;--line:#e3e0d8;--pri:#1f5a3d;--acc:#d98b1f;--onpri:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121714;--fg:#eef2ee;--mut:#a4afa8;--card:#1a211d;--line:#2b342f;--pri:#4aa879;--acc:#f0a63a;--onpri:#0c1510}}
-:root[data-theme="dark"]{--bg:#121714;--fg:#eef2ee;--mut:#a4afa8;--card:#1a211d;--line:#2b342f;--pri:#4aa879;--acc:#f0a63a;--onpri:#0c1510}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{
+  --bg:#1f2124;--fg:#ededed;--mut:#a9adb3;--card:#2a2d31;--line:#3a3e44;
+  --pri:#c9a24b;--acc:#c9a24b;--onpri:#1a1b1d;
+  color-scheme:dark;box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)
+}
+#services,#why,#process,#projects,#testimonials,#materials{
+  --bg:#fbfaf7;--fg:#1d2420;--mut:#5b665f;--card:#fff;--line:#e3e0d8;
+  --pri:#1f5a3d;--acc:#d98b1f;--onpri:#fff;background:var(--bg);color:var(--fg);color-scheme:light
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.w{max-width:1000px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line);background:var(--bg)}
-.nav{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:16px 0 14px;gap:8px}
-.logo{font-weight:800;font-size:1.15rem;letter-spacing:.3px}.logo span{color:var(--acc)}.logo small{display:block;font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-top:2px}
-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 48px;margin-top:6px}nav a{display:inline-flex;align-items:center;gap:8px;color:var(--mut);text-decoration:none;margin:0;font-size:1rem;font-weight:600}.ni{width:20px;height:20px;fill:none;stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}nav a:hover{color:var(--pri)}
-.hero{padding:64px 20px 56px}
-.tag{display:inline-block;color:var(--acc);font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase}
-h1{font-size:clamp(1.6rem,5.5vw,2.6rem);line-height:1.2;margin:10px 0 8px}
-.hero p{font-size:1.1rem;color:var(--mut);max-width:620px}
-.btn{display:inline-block;background:var(--pri);color:var(--onpri);padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin:20px 10px 0 0}
+.w{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(31,33,36,.96);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0;gap:20px}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:.3px;white-space:nowrap}
+.logo span{color:var(--acc)}
+.logo small{display:block;font-size:.62rem;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--mut);margin-top:-1px}
+nav{display:flex;align-items:center;gap:24px}
+nav a{display:inline-flex;align-items:center;gap:7px;color:var(--mut);text-decoration:none;font-size:.92rem;font-weight:650}
+.ni{width:18px;height:18px;fill:none;stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+nav a:hover{color:var(--fg)}
+
+.hero{padding:76px 22px 74px;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:48px;align-items:center}
+.hero-copy{max-width:680px}
+.tag{display:inline-block;color:var(--acc);font-weight:750;font-size:.76rem;letter-spacing:1.7px;text-transform:uppercase}
+h1{font-size:clamp(2.35rem,6vw,4.25rem);line-height:1.02;letter-spacing:-1.8px;margin:12px 0 18px;max-width:700px}
+.hero h1 span{color:var(--acc)}
+.hero p{font-size:1.12rem;color:var(--mut);max-width:650px;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--pri);color:var(--onpri);padding:13px 21px;border-radius:8px;text-decoration:none;font-weight:750;margin:22px 9px 0 0;min-height:48px}
 .btn.o{background:transparent;color:var(--pri);border:2px solid var(--pri)}
-section{padding:48px 0;border-top:1px solid var(--line)}
-h2{font-size:1.7rem;margin:0 0 8px}.sub{color:var(--mut);margin:0 0 28px}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.c{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
-.c h3{margin:0 0 6px;font-size:1.05rem;color:var(--pri)}.c p{margin:0;color:var(--mut);font-size:.95rem}
-.n{font-size:1.6rem;font-weight:800;color:var(--acc)}
-.cta{background:var(--pri);color:var(--onpri);border-radius:14px;padding:32px 24px;text-align:center}
-.cta h2{margin-bottom:8px}.cta .btn{background:var(--onpri);color:var(--pri)}
-.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}table{width:100%;border-collapse:collapse;min-width:420px}th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:.95rem}th{color:var(--mut);font-size:.8rem;text-transform:uppercase;letter-spacing:1px}td.p{font-weight:700;color:var(--pri);white-space:nowrap}tr:last-child td{border-bottom:0}.note{color:var(--mut);font-size:.85rem;margin-top:12px}
-.hs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px}.hc{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--fg);transition:transform .15s}.hc:hover{transform:translateY(-3px)}.hb{display:flex;align-items:center;gap:14px;padding:22px 20px;border-left:5px solid var(--acc)}.hn{font-size:1.3rem;font-weight:800;color:var(--acc)}.ht{font-size:1.1rem;font-weight:700;line-height:1.3}
-.ic{width:36px;height:36px;display:block;margin-bottom:10px;fill:none;stroke:var(--acc);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.bi{width:18px;height:18px;vertical-align:-3px;margin-right:8px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.lead{font-size:1.2rem;color:var(--mut);max-width:640px;margin:14px 0 0}
+.btn:hover{filter:brightness(1.08)}
+.hero-visual{min-height:310px;border-radius:18px;border:1px solid #3a3e44;background:
+linear-gradient(135deg,rgba(31,90,61,.82),rgba(31,33,36,.95)),
+linear-gradient(45deg,#2a2d31,#17191b);display:flex;align-items:flex-end;padding:26px;overflow:hidden;position:relative}
+.hero-visual:before{content:"";position:absolute;width:230px;height:230px;border:1px solid rgba(201,162,75,.4);transform:rotate(45deg);right:-65px;top:-75px}
+.hero-visual:after{content:"";position:absolute;width:150px;height:150px;border:1px solid rgba(255,255,255,.13);transform:rotate(45deg);right:25px;bottom:-80px}
+.visual-label{position:relative;z-index:1}
+.visual-label strong{display:block;color:#fff;font-size:1.35rem}
+.visual-label span{color:#d6d9d6;font-size:.9rem}
+
+section{padding:66px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.65rem,4vw,2.15rem);letter-spacing:-.4px;margin:0 0 8px}
+.sub{color:var(--mut);margin:0 0 30px;max-width:680px}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:21px}
+.c h3{margin:0 0 7px;font-size:1.05rem;color:var(--pri)}
+.c p{margin:0;color:var(--mut);font-size:.94rem}
+.ic{width:36px;height:36px;display:block;margin-bottom:13px;fill:none;stroke:var(--acc);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+.service-group{margin-top:34px}
+.service-group h3{font-size:.78rem;letter-spacing:1.6px;text-transform:uppercase;color:var(--acc);margin:0 0 13px}
+.service-group .g{grid-template-columns:repeat(3,1fr)}
+
+.benefits .c{padding:22px}
+.benefits .c h3{font-size:1.03rem}
+.flex-note{display:inline-block;margin-top:8px;font-size:.86rem;font-weight:700;color:var(--pri)}
+
+#process{background:#f2f1ec}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
+.step{position:relative;padding:22px 19px;background:#fff;border:1px solid var(--line);border-radius:13px}
+.step .n{display:block;font-size:1.8rem;font-weight:850;color:var(--acc);line-height:1;margin-bottom:18px}
+.step h3{margin:0 0 6px;font-size:1.02rem;color:var(--pri)}
+.step p{margin:0;color:var(--mut);font-size:.92rem}
+
+#materials .material-callout{background:#1f5a3d;color:#fff;border-radius:16px;padding:30px}
+.material-callout h2{color:#fff}
+.material-callout p{color:#dce8e1;max-width:650px;margin:8px 0 0}
+.material-callout .btn{background:#fff;color:#1f5a3d}
+
+.project-intro{display:flex;justify-content:space-between;gap:20px;align-items:end}
+.project-note{color:var(--mut);font-size:.9rem}
+.car{position:relative;overflow:hidden;border-radius:14px}
+.car .it{opacity:0;transition:opacity .9s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+.car .it.on{opacity:1;position:relative}
+.ph{aspect-ratio:16/9;max-height:470px;background:#2a2d31;border:1px solid var(--line)}
+.ph .it{position:absolute}
+.ph .it.on{position:relative}
+.ph .it img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph b{color:#c9a24b;font-size:clamp(1.2rem,4.5vw,1.8rem);letter-spacing:2px;text-transform:uppercase}
+.ph i{color:#a9adb3;font-style:normal;font-size:.9rem;margin-top:6px}
+.tc{min-height:170px;background:var(--card);border:1px dashed var(--line)}
+.tc .it{position:absolute}.tc .it.on{position:absolute}
+.tc p{font-size:1.15rem;font-style:italic;max-width:620px;margin:0}
+.tc .by{margin-top:14px;font-weight:700;font-size:.9rem}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
+.dots button.on{background:var(--acc)}
+
+.cta{background:var(--pri);color:var(--onpri);border-radius:16px;padding:38px 26px;text-align:center}
+.cta h2{margin-bottom:8px}.cta p{margin:0 auto;max-width:580px}
+.cta .btn{background:var(--onpri);color:var(--pri)}
 footer{padding:28px 0;color:var(--mut);font-size:.88rem;border-top:1px solid var(--line)}
+.bi{width:18px;height:18px;vertical-align:-3px;margin-right:7px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;padding:13px 16px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.wa svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wa:hover{filter:brightness(1.08)}
+@media(max-width:800px){
+  .nav{flex-direction:column;gap:10px;padding:12px 0}
+  nav{width:100%;justify-content:center;gap:10px 20px}
+  nav a{font-size:.86rem}
+  nav .ni{display:none}
+  .hero{grid-template-columns:1fr;padding-top:55px;gap:28px}
+  .hero-visual{min-height:245px}
+  .g,.service-group .g{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+  .w{padding:0 17px}
+  .hero{padding:45px 17px 48px}
+  h1{font-size:clamp(2.25rem,13vw,3.3rem)}
+  .hero p{font-size:1rem}
+  .hero-visual{min-height:205px;padding:20px}
+  .g,.service-group .g,.steps{grid-template-columns:1fr}
+  section{padding:50px 0}
+  .project-intro{display:block}
+  .btn{width:100%;margin-right:0}
+  .cta{padding:30px 19px}
+  .wa span{display:none}.wa{padding:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header><div class="w nav"><div class="logo">IMARA <span>DSB</span> LTD<small>Design · Supply · Build</small></div>
-<nav><a href="#services"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>Services</a><a href="#why"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Why Imara</a><a href="prices.html"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l9-9h8v8l-9 9z"/><circle cx="16" cy="8" r="1.2"/></svg>Materials</a><a href="#contact"><svg class="ni" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>Contact</a></nav></div></header>
+<header><div class="w nav">
+<div class="logo">IMARA <span>DSB</span> LTD<small>Design · Supply · Build</small></div>
+<nav>
+<a href="#services">Services</a>
+<a href="#why">Why Imara</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav></div></header>
 
 <main>
-<div class="w hero">
-<span class="tag">Imara DSB Construction Ltd · Meru, Kenya</span>
-<p class="lead">We bring together a team of qualified engineers, architects, suppliers and artisans to deliver your vision.</p>
-<a class="btn" href="#contact">Contact us for a free consultation</a>
-</div>
 
+<section class="hero" style="border-top:0">
+  <div class="hero-copy">
+    <span class="tag">Imara DSB Construction Ltd · Meru, Kenya</span>
+    <h1>DESIGN. <span>SUPPLY.</span> BUILD.</h1>
+    <p>Professional construction services, tailored to your project. Choose the services you need — from architectural and structural plans to BOQs, supervision, construction and quality building materials.</p>
+    <a class="btn" href="#contact">Get a free consultation</a>
+    <a class="btn o" href="https://wa.me/254787145897">WhatsApp us</a>
+  </div>
+  <div class="hero-visual">
+    <div class="visual-label">
+      <strong>Build with confidence.</strong>
+      <span>Professional services for residential and commercial projects.</span>
+    </div>
+  </div>
+</section>
 
 <section id="services"><div class="w">
-<h2>What we do</h2><p class="sub">Everything you need to take a project from idea to finished building.</p>
-<div class="g">
-<div class="c"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></svg><h3>Architectural Design</h3><p>Practical house and commercial building plans that fit your plot, budget and way of living.</p></div>
-<div class="c"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M3 19h18M12 5v14"/></svg><h3>Structural Design</h3><p>Safe, economical foundations, columns, beams and slabs designed by a qualified civil engineer.</p></div>
-<div class="c"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6v3H9zM7 5H5v16h14V5h-2M9 12h6M9 16h6"/></svg><h3>Bills of Quantities</h3><p>Clear BOQs and cost estimates so you know the real cost before you start, and for tender submissions.</p></div>
-<div class="c"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Project Supervision</h3><p>Regular site checks on materials, workmanship and progress so you get what you paid for.</p></div>
-<div class="c"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v5H3zM3 14h18v5H3zM9 5v5M15 14v5"/></svg><h3>Construction</h3><p>Boundary walls, houses, rentals and commercial buildings, built to the approved design, including wastewater management systems and biodigesters.</p></div>
-<div class="c"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 6h11v10H2zM13 9h4l3 3v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Materials Supply</h3><p>Quality materials at the best competitive prices, delivered to site. <a href="prices.html" style="color:var(--pri);font-weight:700">Ask about materials →</a></p></div>
-</div></div></section>
+  <h2>Our services</h2>
+  <p class="sub">Choose the specific service your project requires. You can engage us for one service or several, depending on your needs.</p>
+
+  <div class="service-group">
+    <h3>Design & Planning</h3>
+    <div class="g">
+      <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></svg><h3>Architectural Design</h3><p>Practical house and commercial building plans designed around your plot, budget and needs.</p></div>
+      <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M3 5h18M3 19h18M12 5v14"/></svg><h3>Structural Design</h3><p>Safe and economical foundations, columns, beams and slabs designed by a qualified civil engineer.</p></div>
+      <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M9 4h6v3H9zM7 5H5v16h14V5h-2M9 12h6M9 16h6"/></svg><h3>Bills of Quantities</h3><p>Clear BOQs and cost estimates to help you understand project costs and prepare for tendering or construction.</p></div>
+    </div>
+  </div>
+
+  <div class="service-group">
+    <h3>Construction & Management</h3>
+    <div class="g">
+      <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Project Supervision</h3><p>Regular site checks on materials, workmanship and progress so your project stays aligned with the approved requirements.</p></div>
+      <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M3 5h18v5H3zM3 14h18v5H3zM9 5v5M15 14v5"/></svg><h3>Construction</h3><p>Construction of boundary walls, houses, rentals and commercial buildings to the approved design.</p></div>
+      <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19"/></svg><h3>Biodigesters & Wastewater Management</h3><p>Practical wastewater solutions and biodigesters suited to residential and other building projects.</p></div>
+    </div>
+  </div>
+</div></section>
 
 <section id="why"><div class="w">
-<h2>Why choose Imara DSB</h2><p class="sub">Local knowledge, engineering discipline.</p>
-<div class="g">
-<div class="c"><div class="n">01</div><h3>Engineer-led</h3><p>Your project is handled by a civil engineer, not a middleman.</p></div>
-<div class="c"><div class="n">02</div><h3>Local prices</h3><p>Estimates built from real Meru and Maua supplier rates, not guesswork.</p></div>
-<div class="c"><div class="n">03</div><h3>No surprises</h3><p>Detailed quantities and costs agreed up front, so budgets hold.</p></div>
-<div class="c"><div class="n">04</div><h3>One team</h3><p>Design, costing, supervision and construction under one roof.</p></div>
-</div></div></section>
+  <h2>Why choose Imara?</h2>
+  <p class="sub">Professional services focused on the specific needs of your project.</p>
+  <div class="g benefits">
+    <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Flexible services</h3><p>Choose the specific professional service you need, whether it is design, a BOQ, supervision, construction or materials supply.</p></div>
+    <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></svg><h3>Qualified professionals</h3><p>Access qualified architects, engineers and skilled artisans according to the requirements of your project.</p></div>
+    <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l3 3v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><h3>Quality materials at competitive prices</h3><p>We can supply building materials for your project at very competitive prices.</p></div>
+    <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M9 4h6v3H9zM7 5H5v16h14V5h-2M9 12h6M9 16h6"/></svg><h3>Clear cost planning</h3><p>Detailed BOQs and cost estimates help you understand the quantities and costs involved before construction.</p></div>
+    <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><h3>Professional supervision</h3><p>Independent project supervision focused on materials, workmanship and progress.</p></div>
+    <div class="c"><svg class="ic" viewBox="0 0 24 24"><path d="M4 19h16M5 19V8l7-5 7 5v11M9 19v-6h6v6"/></svg><h3>Practical project solutions</h3><p>Solutions are developed around your site, project requirements and intended use of the building.</p></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="w">
+  <h2>How we can work with you</h2>
+  <p class="sub">Start with the service you need. Add other services only when they make sense for your project.</p>
+  <div class="steps">
+    <div class="step"><span class="n">01</span><h3>Tell us what you need</h3><p>Share your project, site or specific service requirement with us.</p></div>
+    <div class="step"><span class="n">02</span><h3>Get the service</h3><p>We provide the agreed professional service and scope of work.</p></div>
+    <div class="step"><span class="n">03</span><h3>Review & proceed</h3><p>Review the work and decide whether you need any additional services.</p></div>
+    <div class="step"><span class="n">04</span><h3>Build when ready</h3><p>If construction is required, we can also assist with the build and related services.</p></div>
+  </div>
+</div></section>
+
+<section id="materials"><div class="w">
+  <div class="material-callout">
+    <h2>Quality building materials at very competitive prices</h2>
+    <p>We can supply cement, steel, plumbing, electrical materials and more for your project.</p>
+    <a class="btn" href="https://claude.ai/artifact/FFeYqrRAhnkbBk7rUCKiqP" target="_blank" rel="noopener">View supply prices →</a>
+  </div>
+</div></section>
+
+<section id="projects"><div class="w">
+  <div class="project-intro">
+    <div><h2>Our projects</h2><p class="sub">Past and ongoing work by Imara DSB.</p></div>
+    <div class="project-note">Project photographs can be added here as your portfolio grows.</div>
+  </div>
+  <div class="car ph" data-car data-ms="3500">
+    <div class="it on"><b>Residential Projects</b><i>Add completed project photography here</i></div>
+    <div class="it"><b>Commercial Projects</b><i>Add completed project photography here</i></div>
+    <div class="it"><b>Construction Work</b><i>Add completed project photography here</i></div>
+  </div>
+  <div class="dots"></div>
+</div></section>
+
+<section id="testimonials"><div class="w">
+  <h2>What our clients say</h2>
+  <p class="sub">We will showcase verified client feedback here.</p>
+  <div class="c" style="text-align:center;padding:30px">
+    <p style="margin:0;color:var(--mut)">Client testimonials will be added as verified feedback becomes available.</p>
+  </div>
+</div></section>
 
 <section id="contact"><div class="w">
-<div class="cta">
-<h2>Planning to build? Let's talk.</h2>
-<p>Tell us about your project and book a free consultation.</p>
-<a class="btn" href="tel:+254787145897"><svg class="bi" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>Call: 0787 145 897</a>
-<a class="btn" href="https://wa.me/254787145897"><svg class="bi" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 01-13.4 7.8L3 21l1.3-4.4A9 9 0 1121 12z"/></svg>WhatsApp us</a>
-<p style="margin-top:18px;font-size:.95rem">Email: <a href="mailto:Imara-dsb-ltd@gmail.com" style="color:inherit;font-weight:700">Imara-dsb-ltd@gmail.com</a> · Serving Meru, Maua, Igembe, Tigania, Chuka and beyond.</p>
-</div></div></section>
+  <div class="cta">
+    <h2>Need a construction service?</h2>
+    <p>Tell us what you need and let's discuss your project or specific service requirement.</p>
+    <a class="btn" href="tel:+254787145897"><svg class="bi" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>Call: 0787 145 897</a>
+    <a class="btn" href="https://wa.me/254787145897"><svg class="bi" viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-13.4 7.8L3 21l1.3-4.4A9 9 0 1121 12z"/></svg>WhatsApp us</a>
+    <p style="margin-top:18px;font-size:.95rem">Email: <a href="mailto:Imara-dsb-ltd@gmail.com" style="color:inherit;font-weight:700">Imara-dsb-ltd@gmail.com</a> · Serving Meru, Maua, Igembe, Tigania, Chuka and beyond.</p>
+  </div>
+</div></section>
+
 </main>
 
-<footer><div class="w">© 2026 Imara DSB Construction Ltd. All rights reserved.</div></footer>
+<footer><div class="w">© 2026 Imara DSB Construction Ltd. All rights reserved. · Meru, Kenya</div></footer>
+<script>
+document.querySelectorAll('[data-car]').forEach(function(c){
+  var it=c.querySelectorAll('.it'),d=c.nextElementSibling,i=0,t,b=[];
+  it.forEach(function(_,n){
+    var x=document.createElement('button');
+    x.setAttribute('aria-label','Project '+(n+1));
+    x.onclick=function(){go(n);run()};
+    d.appendChild(x);b.push(x);
+  });
+  function go(n){it[i].classList.remove('on');b[i].classList.remove('on');i=n;it[i].classList.add('on');b[i].classList.add('on')}
+  function run(){clearInterval(t);if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(function(){go((i+1)%it.length)},+c.dataset.ms||4000)}
+  b[0].classList.add('on');run();
+});
+</script>
+<a class="wa" href="https://wa.me/254787145897?text=Hello%20Imara%20DSB%2C%20I%27d%20like%20to%20enquire%20about%20a%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 01-13.4 7.8L3 21l1.3-4.4A9 9 0 1121 12z"/><path d="M9 9.5c.5 2.5 2.5 4.5 5 5l1.2-1.2-1.7-1-.8.6a3 3 0 01-1.6-1.6l.6-.8-1-1.7z"/></svg><span>WhatsApp</span></a>
 </body>
 </html>
