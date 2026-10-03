@@ -14,7 +14,7 @@
 }
 #services,#why,#process,#projects,#testimonials,#materials{
   --bg:#fbfaf7;--fg:#1d2420;--mut:#5b665f;--card:#fff;--line:#e3e0d8;
-  --pri:#1f5a3d;--acc:#d98b1f;--onpri:#fff;background:var(--bg);color:var(--fg);color-scheme:light
+  --pri:#1f5a3d;--acc:#d98b1f;--onpri:#fff;--bg2:#f2f1ec;background:var(--bg);color:var(--fg);color-scheme:light
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
@@ -65,9 +65,9 @@ h2{font-size:clamp(1.65rem,4vw,2.15rem);letter-spacing:-.4px;margin:0 0 8px}
 .benefits .c h3{font-size:1.03rem}
 .flex-note{display:inline-block;margin-top:8px;font-size:.86rem;font-weight:700;color:var(--pri)}
 
-#process{background:#f2f1ec}
+#process{background:var(--bg2)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
-.step{position:relative;padding:22px 19px;background:#fff;border:1px solid var(--line);border-radius:13px}
+.step{position:relative;padding:22px 19px;background:var(--card);border:1px solid var(--line);border-radius:13px}
 .step .n{display:block;font-size:1.8rem;font-weight:850;color:var(--acc);line-height:1;margin-bottom:18px}
 .step h3{margin:0 0 6px;font-size:1.02rem;color:var(--pri)}
 .step p{margin:0;color:var(--mut);font-size:.92rem}
@@ -82,16 +82,18 @@ h2{font-size:clamp(1.65rem,4vw,2.15rem);letter-spacing:-.4px;margin:0 0 8px}
 .car{position:relative;overflow:hidden;border-radius:14px}
 .car .it{opacity:0;transition:opacity .9s;position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
 .car .it.on{opacity:1;position:relative}
-.ph{aspect-ratio:16/9;max-height:470px;background:#2a2d31;border:1px solid var(--line)}
+.ph{aspect-ratio:16/9;width:100%;background:#2a2d31;border:1px solid var(--line)}
 .ph .it{position:absolute}
-.ph .it.on{position:relative}
+.ph .it.on{position:absolute}
 .ph .it img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .ph b{color:#c9a24b;font-size:clamp(1.2rem,4.5vw,1.8rem);letter-spacing:2px;text-transform:uppercase}
 .ph i{color:#a9adb3;font-style:normal;font-size:.9rem;margin-top:6px}
-.tc{min-height:170px;background:var(--card);border:1px dashed var(--line)}
-.tc .it{position:absolute}.tc .it.on{position:absolute}
-.tc p{font-size:1.15rem;font-style:italic;max-width:620px;margin:0}
-.tc .by{margin-top:14px;font-weight:700;font-size:.9rem}
+.tc{display:grid;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.tc .it,.tc .it.on{position:static;grid-area:1/1;inset:auto;padding:28px 24px}
+.tc .it{opacity:0;transition:opacity .9s}.tc .it.on{opacity:1}
+.tc p{font-size:1.08rem;font-style:italic;max-width:700px;margin:0 auto;color:var(--fg);line-height:1.65}
+.tc .by{display:block;margin-top:16px;font-weight:700;font-size:.95rem;color:var(--pri)}
+.tc .by small{display:block;font-weight:500;font-size:.84rem;color:var(--mut)}
 .dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
 .dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
 .dots button.on{background:var(--acc)}
@@ -104,6 +106,15 @@ footer{padding:28px 0;color:var(--mut);font-size:.88rem;border-top:1px solid var
 .wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;font-weight:700;padding:13px 16px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
 .wa svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .wa:hover{filter:brightness(1.08)}
+
+/* Night mode: follows the browser/device setting */
+@media (prefers-color-scheme: dark){
+  #services,#why,#process,#projects,#testimonials,#materials{--bg:#1f2124;--fg:#ededed;--mut:#a9adb3;--card:#2a2d31;--line:#3a3e44;--pri:#c9a24b;--acc:#c9a24b;--onpri:#1a1b1d;--bg2:#25282b;background:var(--bg);color:var(--fg);color-scheme:dark}
+  #process{background:var(--bg2)}
+  #materials .material-callout{background:#2a2d31;border:1px solid #c9a24b}
+  .material-callout p{color:#a9adb3}
+  .material-callout .btn{background:#c9a24b;color:#1a1b1d}
+}
 @media(max-width:800px){
   .nav{flex-direction:column;gap:10px;padding:12px 0}
   nav{width:100%;justify-content:center;gap:10px 20px}
@@ -138,7 +149,8 @@ footer{padding:28px 0;color:var(--mut);font-size:.88rem;border-top:1px solid var
 <a href="#why">Why Imara</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-</nav></div></header>
+</nav>
+</div></header>
 
 <main>
 
@@ -209,29 +221,36 @@ footer{padding:28px 0;color:var(--mut);font-size:.88rem;border-top:1px solid var
   <div class="material-callout">
     <h2>Quality building materials at very competitive prices</h2>
     <p>We can supply cement, steel, plumbing, electrical materials and more for your project.</p>
-    <a class="btn" href="https://claude.ai/artifact/FFeYqrRAhnkbBk7rUCKiqP" target="_blank" rel="noopener">View supply prices →</a>
+    <a class="btn" href="supply.html">View supply prices →</a>
   </div>
 </div></section>
 
 <section id="projects"><div class="w">
   <div class="project-intro">
     <div><h2>Our projects</h2><p class="sub">Past and ongoing work by Imara DSB.</p></div>
-    <div class="project-note">Project photographs can be added here as your portfolio grows.</div>
   </div>
   <div class="car ph" data-car data-ms="3500">
-    <div class="it on"><b>Residential Projects</b><i>Add completed project photography here</i></div>
-    <div class="it"><b>Commercial Projects</b><i>Add completed project photography here</i></div>
-    <div class="it"><b>Construction Work</b><i>Add completed project photography here</i></div>
+    <div class="it on"><img src="images/project1.jpg" alt="Completed stone bungalow with yellow trim and grey roof"></div>
+    <div class="it"><img src="images/project2.jpg" alt="Two-storey residential house with arched balcony"></div>
+    <div class="it"><img src="images/project3.jpg" alt="Entrance gate and gatehouse"></div>
+    <div class="it"><img src="images/project4.jpg" alt="Two-storey house with arched entrance"></div>
+    <div class="it"><img src="images/project5.jpg" alt="Stone bungalow with tiled roof"></div>
+    <div class="it"><img src="images/project6.jpg" alt="House under construction on a sloping site"></div>
+    <div class="it"><img src="images/project7.jpg" alt="Entrance gate arch being finished"></div>
   </div>
   <div class="dots"></div>
 </div></section>
 
 <section id="testimonials"><div class="w">
   <h2>What our clients say</h2>
-  <p class="sub">We will showcase verified client feedback here.</p>
-  <div class="c" style="text-align:center;padding:30px">
-    <p style="margin:0;color:var(--mut)">Client testimonials will be added as verified feedback becomes available.</p>
+  <p class="sub">Feedback from people we have worked with.</p>
+  <div class="car tc" data-car data-ms="6500">
+    <div class="it on"><p>“Imara DSB Ltd did a great job on my home renovation at Nkinyanga and the tiling works at the NHIF Building in Maua. I was impressed by their professionalism, quality workmanship and attention to detail. I would gladly recommend them for reliable construction work.”</p><span class="by">Amb. Kiringo</span></div>
+    <div class="it"><p>“Imara DSB Ltd helped me source quality building materials at very affordable prices. They saved me money and made the whole process much easier. I really appreciated their reliability and willingness to find the best options for me.”</p><span class="by">Joy Kinya<small>Meru County Government</small></span></div>
+    <div class="it"><p>“I brought in Imara DSB Ltd when I realized there were serious issues at my site. They quickly identified and corrected mistakes that could have cost me a lot more to fix later. Their attention to detail, professionalism and practical approach gave me confidence that the project was in good hands. I would highly recommend Imara DSB Ltd.”</p><span class="by">Michael Michubu<small>KCB Bank</small></span></div>
+    <div class="it"><p>“I approached Imara DSB Ltd for building plans, and they went beyond just the design. They guided me on which units would make the most sense to invest in, then handled the architectural and structural designs. The units are now complete and fully occupied. I’m very happy with the results and would highly recommend Imara DSB Ltd.”</p><span class="by">Alex Wainana</span></div>
   </div>
+  <div class="dots"></div>
 </div></section>
 
 <section id="contact"><div class="w">
@@ -252,7 +271,7 @@ document.querySelectorAll('[data-car]').forEach(function(c){
   var it=c.querySelectorAll('.it'),d=c.nextElementSibling,i=0,t,b=[];
   it.forEach(function(_,n){
     var x=document.createElement('button');
-    x.setAttribute('aria-label','Project '+(n+1));
+    x.setAttribute('aria-label','Slide '+(n+1));
     x.onclick=function(){go(n);run()};
     d.appendChild(x);b.push(x);
   });
