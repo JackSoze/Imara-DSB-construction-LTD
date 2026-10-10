@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 <title>Imara DSB Construction Ltd | Design · Supply · Build – Meru</title>
 <meta name="description" content="Imara DSB Construction Ltd provides architectural and structural design, BOQs, project supervision, construction, building materials, biodigesters and wastewater management in Meru, Maua and Eastern Kenya.">
 <style>
@@ -17,16 +17,16 @@
   --pri:#1f5a3d;--acc:#d98b1f;--onpri:#fff;--bg2:#f2f1ec;background:var(--bg);color:var(--fg);color-scheme:light
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html{touch-action:pan-x pan-y;font-size:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--fg);font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .w{max-width:1080px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(31,33,36,.96);backdrop-filter:blur(12px)}
+header{font-size:calc(16px*var(--hz,1));position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);background:rgba(31,33,36,.96);backdrop-filter:blur(12px)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:13px 0;gap:20px}
-.logo{font-weight:800;font-size:1.25rem;letter-spacing:.3px;white-space:nowrap}
+.logo{font-weight:800;font-size:1.25em;letter-spacing:.3px;white-space:normal}
 .logo span{color:var(--acc)}
-.logo small{display:block;font-size:.62rem;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--mut);margin-top:-1px}
-nav{display:flex;align-items:center;gap:24px}
-nav a{display:inline-flex;align-items:center;gap:7px;color:var(--mut);text-decoration:none;font-size:.92rem;font-weight:650}
+.logo small{display:block;font-size:.62em;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--mut);margin-top:-1px}
+nav{display:flex;flex-wrap:wrap;align-items:center;gap:24px}
+nav a{display:inline-flex;align-items:center;gap:7px;color:var(--mut);text-decoration:none;font-size:.92em;font-weight:650}
 .ni{width:18px;height:18px;fill:none;stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 nav a:hover{color:var(--fg)}
 
@@ -118,7 +118,7 @@ footer{padding:28px 0;color:var(--mut);font-size:.88rem;border-top:1px solid var
 @media(max-width:800px){
   .nav{flex-direction:column;gap:10px;padding:12px 0}
   nav{width:100%;justify-content:center;gap:10px 20px}
-  nav a{font-size:.86rem}
+  nav a{font-size:.86em}
   nav .ni{display:none}
   .hero{grid-template-columns:1fr;padding-top:55px;gap:28px}
   .hero-visual{min-height:245px}
@@ -237,6 +237,9 @@ footer{padding:28px 0;color:var(--mut);font-size:.88rem;border-top:1px solid var
     <div class="it"><img src="images/project5.jpg" alt="Stone bungalow with tiled roof"></div>
     <div class="it"><img src="images/project6.jpg" alt="House under construction on a sloping site"></div>
     <div class="it"><img src="images/project7.jpg" alt="Entrance gate arch being finished"></div>
+    <div class="it"><img src="images/project8.jpg" alt="Column formwork and reinforcement at a construction site in Meru"></div>
+    <div class="it"><img src="images/project9.jpg" alt="Slab formwork being prepared on site with workers in safety vests"></div>
+    <div class="it"><img src="images/project10.jpg" alt="Two-storey building with stone-clad columns and a covered entrance" style="object-position:50% 35%"></div>
   </div>
   <div class="dots"></div>
 </div></section>
@@ -266,6 +269,18 @@ footer{padding:28px 0;color:var(--mut);font-size:.88rem;border-top:1px solid var
 </main>
 
 <footer><div class="w">© 2026 Imara DSB Construction Ltd. All rights reserved. · Meru, Kenya</div></footer>
+<script>
+(function(){var r=document.documentElement,z=100;try{z=Math.max(100,Math.min(200,+localStorage.getItem('imz')||100))}catch(e){}
+function ap(){r.style.fontSize=z+'%';r.style.setProperty('--hz',1+(z-100)/200)}
+function a(){ap();try{localStorage.setItem('imz',z)}catch(e){}}
+a();
+var d0=0,z0=100;function dist(t){var x=t[0].clientX-t[1].clientX,y=t[0].clientY-t[1].clientY;return Math.sqrt(x*x+y*y)}
+document.addEventListener('touchstart',function(e){if(e.touches.length==2){d0=dist(e.touches);z0=z}},{passive:true});
+document.addEventListener('touchmove',function(e){if(e.touches.length==2&&d0){e.preventDefault();z=Math.round(Math.max(100,Math.min(200,z0*dist(e.touches)/d0)));ap()}},{passive:false});
+document.addEventListener('touchend',function(e){if(e.touches.length<2&&d0){d0=0;a()}});
+['gesturestart','gesturechange'].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault()})});
+})();
+</script>
 <script>
 document.querySelectorAll('[data-car]').forEach(function(c){
   var it=c.querySelectorAll('.it'),d=c.nextElementSibling,i=0,t,b=[];
